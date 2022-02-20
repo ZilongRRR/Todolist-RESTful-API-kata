@@ -1,0 +1,19 @@
+{
+  "name": "todolist-restful-api-kata",
+  "version": "1.0.0",
+  "description": "預習任務：Todolist RESTful API kata",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZilongRRR/Todolist-RESTful-API-kata.git"
+  },
+  "author": "zilong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZilongRRR/Todolist-RESTful-API-kata/issues"
+  },
+  "homepage": "https://github.com/ZilongRRR/Todolist-RESTful-API-kata#readme"
+}
