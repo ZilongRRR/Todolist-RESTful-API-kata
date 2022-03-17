@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/ZilongRRR/Todolist-RESTful-API-kata/issues"
   },
-  "homepage": "https://github.com/ZilongRRR/Todolist-RESTful-API-kata#readme"
+  "homepage": "https://github.com/ZilongRRR/Todolist-RESTful-API-kata#readme",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
