@@ -4,7 +4,8 @@
   "description": "預習任務：Todolist RESTful API kata",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,7 @@
   "dependencies": {
     "uuid": "^8.3.2"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
+  "engines": {
+    "node": "17.x"
   }
 }
