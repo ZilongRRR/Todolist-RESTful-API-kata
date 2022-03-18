@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "0c0030b6-f3ca-4875-a696-aa9ef723a131",
+		"name": "hexschool/todolist-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://boiling-dusk-74778.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"boiling-dusk-74778",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new todo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"test 456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://boiling-dusk-74778.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"boiling-dusk-74778",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete all todos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://boiling-dusk-74778.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"boiling-dusk-74778",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete on todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://boiling-dusk-74778.herokuapp.com/todos/3deb5327-12f1-4fad-b2d6-5107f9e5605a",
+					"protocol": "https",
+					"host": [
+						"boiling-dusk-74778",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos",
+						"3deb5327-12f1-4fad-b2d6-5107f9e5605a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit one todo",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"test123123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://boiling-dusk-74778.herokuapp.com/todos/417e53e9-7202-49a7-b4e0-c7a79ed395e8",
+					"protocol": "https",
+					"host": [
+						"boiling-dusk-74778",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos",
+						"417e53e9-7202-49a7-b4e0-c7a79ed395e8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
