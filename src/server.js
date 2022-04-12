@@ -1,30 +1,22 @@
-const http = require("http");
-const { v4: uuidv4 } = require("uuid");
-const { errorHandle, successHandle } = require("./resHandle");
-
-const headers = {
-  "Access-Control-Allow-Headers":
-    "Content-Type, Authorization, Content-Length, X-Requested-With",
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "PATCH, POST, GET,OPTIONS,DELETE",
-  "Content-Type": "application/json",
-};
+const http = require('http');
+const { v4: uuidv4 } = require('uuid');
+const { errorHandle, successHandle } = require('./resHandle');
 
 const todos = []; // temp db
 
-const baseUrl = "/todos";
+const baseUrl = '/todos';
 
 const method = {
-  GET: "GET",
-  POST: "POST",
-  DELETE: "DELETE",
-  PATCH: "PATCH",
-  OPTIONS: "OPTIONS",
+  GET: 'GET',
+  POST: 'POST',
+  DELETE: 'DELETE',
+  PATCH: 'PATCH',
+  OPTIONS: 'OPTIONS',
 };
 
 const requestListener = (req, res) => {
-  let body = "";
-  req.on("data", (chunk) => {
+  let body = '';
+  req.on('data', (chunk) => {
     body += chunk;
   });
 
@@ -36,7 +28,7 @@ const requestListener = (req, res) => {
 
   // add new todo
   if (req.url === baseUrl && req.method === method.POST) {
-    req.on("end", () => {
+    req.on('end', () => {
       console.log(body);
       try {
         const newTitle = JSON.parse(body).title;
@@ -68,7 +60,7 @@ const requestListener = (req, res) => {
 
   // delete one todo
   if (req.url.startsWith(`${baseUrl}/`) && req.method === method.DELETE) {
-    const splits = req.url.split("/");
+    const splits = req.url.split('/');
     if (splits.length != 3) {
       errorHandle(res);
       return;
@@ -87,11 +79,11 @@ const requestListener = (req, res) => {
 
   // edit one todo
   if (req.url.startsWith(`${baseUrl}/`) && req.method === method.PATCH) {
-    req.on("end", () => {
+    req.on('end', () => {
       console.log(body);
       try {
         const title = JSON.parse(body).title;
-        const splits = req.url.split("/");
+        const splits = req.url.split('/');
         if (splits.length != 3) {
           errorHandle(res);
           return;
